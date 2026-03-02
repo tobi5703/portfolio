@@ -6,13 +6,22 @@ import Design from './paths/Design'
 import Develop from './paths/Develop';
 
 const App = () => {
+
+    const vars = {
+        light: "#E3E3E3"
+    }
+
+ 
+
     return (
-        <>
+        <> 
                 <Navbar />   
-                <Routes>
-                    <Route path='/' element={<Design />} />
-                    <Route path='/develop' element={<Develop />} />
-                </Routes>
+                <main>
+                    <Routes>
+                        <Route path='/' element={<Design />} />
+                        <Route path='/develop' element={<Develop />} />
+                    </Routes>
+                </main>
         </>
         
     )

@@ -6,23 +6,31 @@ const Navbar = () => {
 
 
     const [toggled, setToggled] = useState(false)
+    const [thumbColor, setThumbColor] = useState("#086976")
     const [thumbPosition, setThumbPosition] = useState('10px')
    
 
     useEffect(() => {
         if (toggled === true ) {
             setThumbPosition("120px")
+            setThumbColor(vars.default_develop)
         } else {
             setThumbPosition("10px")
+            setThumbColor(vars.default_design)
+
         }
     }, [toggled])
 
-
+    const vars = {
+        default_design: "#086976",
+        default_develop: "#489D40",
+        light: "#E3E3E3",
+     
+    }
     
 const navElement = {
     margin: "20px",
     boxSizing: "Border-box",
-    border: "2px solid red",
     display: "flex",
     justifyContent: "Space-between"
 } 
@@ -50,13 +58,12 @@ const toggleElem = {
 }
 
 const toggleText = {
-    color: "white",
+    color: vars.light,
     margin: "10px"
 }
 
 const toggleBtn = {
-    backgroundColor: "white",
-    border: "1px solid red",
+    backgroundColor: vars.light,
     borderRadius: "100px",
     height: "34px",
     width: "150px",
@@ -67,7 +74,7 @@ const toggleBtn = {
 const thumb = {
     height: "20px", 
     width: "20px", 
-    backgroundColor: "black", 
+    backgroundColor: thumbColor, 
     borderRadius: "100px", 
     position: "absolute", 
     top: "50%", 
@@ -76,7 +83,9 @@ const thumb = {
 }
 
 const titleName = {
-    color: "white"
+    color: vars.light,
+    boxSizing: "border-box",
+    padding: "20px"
 }
 
 

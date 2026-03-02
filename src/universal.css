@@ -1,0 +1,8 @@
+
+
+.mask {
+    -webkit-mask-image: url(assets/Tile_light.png);
+    mask-image: url(assets/Tile_light.png);
+    opacity: 0.15;
+}
+
