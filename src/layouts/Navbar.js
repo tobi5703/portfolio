@@ -6,25 +6,16 @@ const Navbar = () => {
 
 
     const [toggled, setToggled] = useState(false)
-    const [thumbColor, setThumbColor] = useState("#086976")
-    const [thumbPosition, setThumbPosition] = useState('10px')
+    const [thumbColor, setThumbColor] = useState(false)
    
 
-    useEffect(() => {
-        if (toggled === true ) {
-            setThumbPosition("120px")
-            setThumbColor(vars.default_develop)
-        } else {
-            setThumbPosition("10px")
-            setThumbColor(vars.default_design)
-
-        }
-    }, [toggled])
+ 
 
     const vars = {
         default_design: "#086976",
         default_develop: "#489D40",
         light: "#E3E3E3",
+        dark: "#161616"
      
     }
     
@@ -38,14 +29,14 @@ const navElement = {
 const logo = {
     width: "105px",
     height: "105px",
-    backgroundColor: "black",
+    backgroundColor: vars.dark,
     borderRadius: "105px"
 }
 
 const menu = {
     width: "970px",
     height: "105px",
-    backgroundColor: "black",
+    backgroundColor: vars.dark,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center"
@@ -56,6 +47,8 @@ const toggleElem = {
     flexDirection: "row",
     alignItems: "center"
 }
+
+
 
 const toggleText = {
     color: vars.light,
@@ -68,17 +61,18 @@ const toggleBtn = {
     height: "34px",
     width: "150px",
     cursor: "pointer",
-    position: "relative"
+    position: "relative",
+    padding: "0"
 }
 
 const thumb = {
     height: "20px", 
     width: "20px", 
-    backgroundColor: thumbColor, 
+    backgroundColor: thumbColor ? vars.default_design : vars.default_develop, 
     borderRadius: "100px", 
     position: "absolute", 
     top: "50%", 
-    left: thumbPosition, 
+    left: toggled? "10px" : "120px", 
     transform: "translateY(-50%)"
 }
 
@@ -88,6 +82,10 @@ const titleName = {
     padding: "20px"
 }
 
+function handleClick() {
+    setToggled(!toggled)
+    setThumbColor(!thumbColor)
+}
 
     return (
         <>
@@ -97,8 +95,10 @@ const titleName = {
             <div style={menu}>
                 <div style={toggleElem}>
                     <p style={toggleText}>Design</p>
-                    <Link to={toggled? "portfolio" : "develop"}>
-                        <button style={toggleBtn} onClick={() => setToggled(!toggled) } >
+                    <Link to={toggled? "portfolio" : "develop"} onClick={() => {
+                        console.log('clicked')
+                    }}>
+                        <button style={toggleBtn} onClick={handleClick}>
                             <div style={thumb}>
 
                             </div>

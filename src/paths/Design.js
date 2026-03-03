@@ -8,7 +8,7 @@ const Design = () => {
         hover: "#06545E",
         clicked: "#053F47",
         light: "#E3E3E3",
-
+        dark: "#161616"
     }
 
     const pageContainer = {
@@ -64,33 +64,67 @@ const Design = () => {
     }
 
     const headerStyle = {
-        color: vars.default
+        color: vars.default,
+        fontFamily: "Zilla Bold",
+        fontSize: "62px"
+
+    }
+
+    const subheaderStyle = {
+        fontFamily: "Zilla Slab",
+        fontSize: "32px",
+        color: vars.dark
     }
 
     const myBackground = {
         gridColumn: "2 / 7",
-        border: "2px solid black",
+        border: "2px solid #161616",
         boxSizing: "border-box",
-        padding: "20px"
+        padding: "20px",
+        color: vars.dark,
+        fontFamily: "Ubuntu",
+        fontSize: "16px",
+        lineHeight: "150%"
+
+    }
+
+    const myBackgroundHeader = {
+        fontFamily: "Zilla Bold",
+        fontSize: "32px",
+        marginBottom: "20px"
     }
 
     const backgroundBtn = {
         color: vars.light,
         backgroundColor: vars.default,
-        
+        width: "110px",
+        height: "45px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "20px",
+        borderRadius: "4px"
+
     }
 
     const skills = {
-        gridColumn: "8 / 12",
+        gridColumn: "9 / 13",
         gridRow: "1 / 3",
-        backgroundColor: "black",
+        backgroundColor: vars.dark,
         color: vars.light,
         boxSizing: "border-box",
-        padding: "20px"
-
+        padding: "20px",
+        width: "70%",
+        fontFamily: "Ubuntu",
+        fontSize: "16px",
+        lineHeight: "150%",
     }
 
-    const skillsHeaderStyle = {
+    
+    const skillsHeader = {
+        fontFamily: "Zilla Slab",
+        fontSize: "24px",
+        marginBottom: "10px",
     }
 
  
@@ -116,25 +150,30 @@ const Design = () => {
                     <h2 style={headerStyle}>
                         Where creativity...
                     </h2>
-                    <p>
+                    <p style={subheaderStyle}>
                         Knowing the rules of design, and breaking them with intention
                     </p>
                 </section>
             
                 <section style={myBackground}>
-                    <h2>
+                    <h2 style={myBackgroundHeader}>
                         Min baggrund:
                     </h2>
                     <p>
                     Jeg har altid været en kreativ person - jeg har dyrket kunst og farver stort set hele mit liv. Multimediedesign kombinere min passion for det kreative med rammer for design, informationsformidling og brugervenlighed. Brugervenlighed - eller mangel derpå - fra andre hjemmesider har specifikt været en stor motivator for mig til at tage Multimediedesign som uddannelse.    
                     </p>
-                    <button style={backgroundBtn}>
-                        Læs mere
-                    </button>
+                    
+                    <a target="_blank" href="https://www.linkedin.com/verify/identity/persona/start/?entryPoint=self_profile_top_card_promo&platform=DESKTOP&referrer=verify_hub_redirect">
+                        <div style={backgroundBtn}>
+                            <p>
+                                Læs mere
+                            </p>
+                        </div>
+                    </a>
                 </section>
 
                 <section style={skills}>
-                    <h2 style={skillsHeaderStyle}>Kompetencer</h2>
+                    <h2 style={skillsHeader}>Kompetencer</h2>
                     <ul>
                         <li>
                             Figma
@@ -175,11 +214,7 @@ const Design = () => {
             </div>
         </div>
 
-     
-       
-        <h2>
-            Design
-        </h2>
+
         </>
     )
 }

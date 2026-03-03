@@ -12,3 +12,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(./assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url(./assets/fonts/Zilla_Slab/ZillaSlab-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Zilla Bold';
+  src: url(./assets/fonts/Zilla_Slab/ZillaSlab-Bold.ttf);
+}
+
+h1 {
+  font-family: 'Zilla Slab';
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}

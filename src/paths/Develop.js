@@ -5,6 +5,7 @@ const Develop = () => {
         hover: "#3A7E33",
         clicked: "#2B5E26",
         light: "#E3E3E3",
+        dark: "#161616"
 
     }
 
@@ -56,34 +57,72 @@ const Develop = () => {
     }
 
     const headerSection = {
-        gridColumn: "6 / 12"
+        gridColumn: "6 / 12",
     }
 
     const headerStyle = {
-        color: vars.default
+        color: vars.default,
+        fontSize: "62px",
+        fontFamily: "Zilla Bold",
+
+    }
+
+    const subheaderStyle = {
+        fontFamily: "Zilla Slab",
+        fontSize: "32px",
+        color: vars.dark
     }
 
      const myBackground = {
         gridColumn: "7 / 12",
-        border: "2px solid black",
+        border: "2px solid #161616 ",
         boxSizing: "border-box",
-        padding: "20px"
+        padding: "20px",
+        color: vars.dark,
+        fontFamily: "Ubuntu",
+        fontSize: "16px",
+        lineHeight: "150%"
+        
     }
 
-    const backgroundBtn = {
+    const myBackgroundHeader = {
+        fontFamily: "Zilla Bold",
+        fontSize: "32px",
+        marginBottom: "20px"
+    }
+
+     const backgroundBtn = {
         color: vars.light,
         backgroundColor: vars.default,
+        width: "110px",
+        height: "45px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "20px",
+        borderRadius: "4px"
         
     }
 
     const skills = {
         gridColumn: "2 / 6",
         gridRow: "1 / 3",
-        backgroundColor: "black",
+        backgroundColor: vars.dark,
         color: vars.light,
         boxSizing: "border-box",
-        padding: "20px"
+        padding: "20px",
+        width: "70%",
+        fontFamily: "Ubuntu",
+        fontSize: "16px",
+        lineHeight: "150%",
 
+    }
+
+    
+    const skillsHeader = {
+        fontFamily: "Zilla Slab",
+        fontSize: "24px",
+        marginBottom: "10px",
     }
     
     return (
@@ -105,25 +144,31 @@ const Develop = () => {
                     <h2 style={headerStyle}>
                         ...meets craftmanship
                     </h2>
-                     <p>
+                     <p style={subheaderStyle}>
                         Turning design into websites using clean and readable code
                     </p>
                 </section>
 
                 <section style={myBackground}>
-                    <h2>
+                    <h2 style={myBackgroundHeader}>
                         Min baggrund:
                     </h2>
                     <p>
                         Jeg har før Multimediedesign taget både en Webudvikler som ervhervsuddannelse, og færdiggjordt 4 semester på Datamatiker-uddannelsen. Kombineret med Multimediedesign giver det mig over 5 års erfaring med Fronted og Web, og en super stærk teknisk profil. Lige så meget som jeg elsker design nyder jeg stadig front-end development, og processen at lave en hjemmeside.
                     </p>
-                    <button style={backgroundBtn}>
-                        Læs mere
-                    </button>
+
+                    <a target="_blank" href="https://www.linkedin.com/verify/identity/persona/start/?entryPoint=self_profile_top_card_promo&platform=DESKTOP&referrer=verify_hub_redirect">
+                        <div style={backgroundBtn}>
+                            <p>
+                                Læs mere
+                            </p>
+                        </div>
+                    </a>
+
                 </section>
 
                  <section style={skills}>
-                    <h2>Kompetencer</h2>
+                    <h2 style={skillsHeader}>Kompetencer</h2>
                     <ul>
                         <li>
                             Figma
@@ -164,12 +209,6 @@ const Develop = () => {
             </div>
         </div>
 
-
-      
-        <h2>
-            Develop
-        </h2>
-      
       
         </>
     )
