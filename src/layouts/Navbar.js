@@ -97,7 +97,7 @@ const titleName = {
             <div style={menu}>
                 <div style={toggleElem}>
                     <p style={toggleText}>Design</p>
-                    <Link to={toggled? "/" : "develop"}>
+                    <Link to={toggled? "portfolio" : "develop"}>
                         <button style={toggleBtn} onClick={() => setToggled(!toggled) } >
                             <div style={thumb}>
 
