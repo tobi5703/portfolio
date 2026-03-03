@@ -68,11 +68,11 @@ const toggleBtn = {
 const thumb = {
     height: "20px", 
     width: "20px", 
-    backgroundColor: thumbColor ? vars.default_design : vars.default_develop, 
+    backgroundColor: thumbColor ?  vars.default_develop : vars.default_design , 
     borderRadius: "100px", 
     position: "absolute", 
     top: "50%", 
-    left: toggled? "10px" : "120px", 
+    left: toggled?  "120px" : "10px" , 
     transform: "translateY(-50%)"
 }
 
@@ -95,7 +95,7 @@ function handleClick() {
             <div style={menu}>
                 <div style={toggleElem}>
                     <p style={toggleText}>Design</p>
-                    <Link to={toggled? "portfolio" : "develop"} onClick={() => {
+                    <Link to={toggled?   "portfolio" : "develop"  } onClick={() => {
                         console.log('clicked')
                     }}>
                         <button style={toggleBtn} onClick={handleClick}>
