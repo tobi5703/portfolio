@@ -24,30 +24,42 @@ const Footer = () => {
         justifyContent: "center"
     }
 
+    const aTag = {
+        color: vars.light
+    }
+
+    const liTag = {
+        listStyle: "none"
+    }
+
     return (
         <>
             <footer style={FooterStyle}>
                 <div style={centerBox}>
                     <ul>
                         <li>
-                            <a target="_blank" href="https://github.com/tobi5703">Github Profile</a>
+                            <a style={aTag} target="_blank" rel="noreferrer" href="https://github.com/tobi5703">Github Profile</a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://github.com/tobi5703/portfolio">
+                            <a style={aTag} target="_blank" rel="noreferrer" href="https://github.com/tobi5703/portfolio">
                                 Github Repository for this website        
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://www.figma.com/design/HKfhoEsYLgVCSR515ehQ2t/Portfolie-Hjemmeside?node-id=15-89&t=2yn9u4ZoFM7uffQL-1">Figma file for this website</a>
+                            <a style={aTag} target="_blank" rel="noreferrer" href="https://www.figma.com/design/HKfhoEsYLgVCSR515ehQ2t/Portfolie-Hjemmeside?node-id=15-89&t=2yn9u4ZoFM7uffQL-1">Figma file for this website</a>
                         </li>
-                        <li>LinkedIn</li>
+                        <li>
+                            <a style={aTag} target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tobias-arboe-b90399109/">
+                                LinkedIn
+                            </a>
+                        </li>
                     </ul>
                 </div>
              
                 <div style={centerBox}>
                     <ul>
                         <li>Made with React</li>
-                        <li>by Tobias Hammeken Arboe</li>
+                        <li style={liTag}>by Tobias Hammeken Arboe</li>
                     </ul>
                 </div>
             </footer>

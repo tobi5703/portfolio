@@ -185,7 +185,6 @@ const Design = () => {
                             </ul>
                         </li>
                         <li>Design Systemer</li>
-                        <li>Design Systemer</li>
                         <li>
                             Adobe
                             <ul>
@@ -194,7 +193,6 @@ const Design = () => {
                                 <li>Aftereffects</li>
                             </ul>
                         </li>
-                        <li>Gestaltlove</li>
                         <li>Gestaltlove</li>
                           <li>
                             Brugertests
